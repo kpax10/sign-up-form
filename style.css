@@ -22,10 +22,6 @@ body {
   display: flex;
 }
 
-
-
-
-
 .bg-img {
   flex-grow: 1;
   background-image: url(/assets/gary-scott-YvRTYzkT6Hs-unsplash.jpg);
@@ -56,14 +52,15 @@ h1 {
   letter-spacing: 6px;
 }
 
+
+
+
 .right {
   width: 60vw;
   background: var(--clr-bg-color);
-  padding: 0 3rem;
-}
-
-.right-container {
-  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 p {
@@ -71,41 +68,58 @@ p {
   font-size: var(--fs-bold);
   font-family: var(--ff-text);
   font-weight: var(--fw-bold);
-  line-height: 1.7rem;
+  line-height: 1.8rem;
 }
 
-.right-container>p:nth-of-type(1) {
-  margin-top: 6rem;
+.right-description>p:nth-of-type(3) {
+  margin-top: 2.5rem;
 }
 
-.right-container>p:nth-of-type(3) {
-  margin-top: 2rem;
+.right-description {
+  padding: 1.5rem 5vw 1.5rem 2vw;
 }
-
-section {
-  background: pink;
-}
-
-section>p {
-  margin-top: 4rem;
-}
-
-
 
 form {
   display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  background-color: rgb(17, 38, 53);
+  background: linear-gradient(to right, rgb(17, 38, 53), black);
+  margin-top: 3rem;
+  padding: 1.5rem 5vw 1.5rem 2vw;
+}
+
+.form-container {
+  max-width: 1100px;
 }
 
 .form-line-container {
   display: flex;
   flex-direction: column;
+  padding-top: 0.8rem;
   color: darkgray;
   font-size: 0.8rem;
-  max-width: 700px;
+  min-width: 200px;
+  width: 50%;
   flex-grow: 1;
 }
 
+label {
+  text-transform: uppercase;
+}
+
 input {
+  border: 1px solid black;
+  border-radius: 0.3rem;
   margin-right: 1rem;
   height: 1.8rem;
+  background-color: var(--clr-bg-color);
+  color: darkgray;
+  font-family: var(--ff-text);
+}
+
+input:focus {
+  outline: 1px solid #d9c48d;
 }
