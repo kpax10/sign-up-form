@@ -4,8 +4,10 @@
 
   --ff-text: 'Montserrat', sans-serif;
 
+  --fs-sm: 1rem;
   --fs-text: 2rem;
   --fs-bold: 1.3rem;
+
 
   --fw-text: 400;
   --fw-bold: 600;
@@ -118,8 +120,14 @@ input {
   background-color: var(--clr-bg-color);
   color: darkgray;
   font-family: var(--ff-text);
+  font-size: var(--fs-sm);
 }
 
 input:focus {
-  outline: 1px solid #d9c48d;
+  outline: 2px solid #d9c48d;
+}
+
+.error {
+  outline: 2px solid #d9c48d;
+
 }
