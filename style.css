@@ -127,7 +127,34 @@ input:focus {
   outline: 2px solid #d9c48d;
 }
 
-.error {
-  outline: 2px solid #d9c48d;
+.error:invalid {
+  outline: 2px solid hsl(0, 62%, 58%);
+}
 
+.error:valid {
+  outline: 2px solid black;
+}
+
+.invalid-password {
+  color: hsl(0, 62%, 58%);
+}
+
+.form-line-container:nth-of-type(5) {
+  position: relative;
+}
+
+.form-line-container>span {
+  position: absolute;
+  bottom: -26px;
+}
+
+button {
+  margin-left: 2vw;
+  margin-top: 2rem;
+  font-size: var(--fs-bold);
+  padding: 1rem 3rem;
+  border: 2px solid lightgray;
+  border-radius: 0.5rem;
+  background-color: var(--clr-bg-color);
+  color: lightgray;
 }
