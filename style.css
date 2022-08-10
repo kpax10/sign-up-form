@@ -1,13 +1,17 @@
 :root {
   --clr-bg-color: hsl(0, 0%, 0%);
   --clr-text-color: hsl(0, 0%, 100%);
+  --clr-green-accent: hsl(170, 91%, 30%);
+  --clr-logo-bg: hsl(0, 0%, 0%, 50%);
+  --clr-dark-gry: hsl(0, 0%, 66%);
+  --clr-red: hsl(0, 62%, 58%);
+  --clr-dark-blue: rgb(17, 38, 53);
 
   --ff-text: 'Montserrat', sans-serif;
 
   --fs-sm: 1rem;
+  --fs-med: 1.3rem;
   --fs-text: 2rem;
-  --fs-bold: 1.3rem;
-
 
   --fw-text: 400;
   --fw-bold: 600;
@@ -22,6 +26,7 @@
 body {
   height: 100vh;
   display: flex;
+  font-family: var(--ff-text);
 }
 
 .bg-img {
@@ -35,27 +40,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: hsl(0, 0%, 0%, 60%);
-  height: 13vh;
+  background-color: var(--clr-logo-bg);
   position: sticky;
+  height: 13vh;
   top: 20vh;
 }
 
 .logo {
-  height: 85%;
-  width: auto;
-  margin-right: 10px;
+  height: 55%;
+  margin-right: 20px;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
   color: var(--clr-text-color);
   font-size: 3rem;
   letter-spacing: 6px;
 }
-
-
-
 
 .right {
   width: 60vw;
@@ -67,18 +67,17 @@ h1 {
 
 p {
   color: var(--clr-text-color);
-  font-size: var(--fs-bold);
-  font-family: var(--ff-text);
+  font-size: var(--fs-med);
   font-weight: var(--fw-bold);
   line-height: 1.8rem;
 }
 
-.right-description>p:nth-of-type(3) {
-  margin-top: 2.5rem;
-}
-
 .right-description {
   padding: 1.5rem 5vw 1.5rem 2vw;
+}
+
+.right-description>p:nth-of-type(3) {
+  margin-top: 2.5rem;
 }
 
 form {
@@ -87,8 +86,7 @@ form {
 }
 
 section {
-  background-color: rgb(17, 38, 53);
-  background: linear-gradient(to right, rgb(17, 38, 53), black);
+  background: linear-gradient(to right, var(--clr-dark-blue), var(--clr-bg-color));
   margin-top: 3rem;
   padding: 1.5rem 5vw 1.5rem 2vw;
 }
@@ -100,12 +98,12 @@ section {
 .form-line-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-top: 0.8rem;
-  color: darkgray;
+  color: var(--clr-dark-gry);
   font-size: 0.8rem;
   min-width: 200px;
   width: 50%;
-  flex-grow: 1;
 }
 
 label {
@@ -113,18 +111,17 @@ label {
 }
 
 input {
-  border: 1px solid black;
+  background-color: var(--clr-bg-color);
+  border: 1px solid var(--clr-bg-color);
   border-radius: 0.3rem;
   margin-right: 1rem;
   height: 1.8rem;
-  background-color: var(--clr-bg-color);
-  color: darkgray;
-  font-family: var(--ff-text);
+  color: var(--clr-dark-gry);
   font-size: var(--fs-sm);
 }
 
 input:focus {
-  outline: 2px solid #d9c48d;
+  outline: 2px solid var(clr);
 }
 
 .error:invalid {
@@ -132,7 +129,7 @@ input:focus {
 }
 
 .error:valid {
-  outline: 2px solid black;
+  outline: 2px solid var(--clr-bg-color);
 }
 
 .invalid-password {
@@ -148,13 +145,38 @@ input:focus {
   bottom: -26px;
 }
 
-button {
-  margin-left: 2vw;
-  margin-top: 2rem;
-  font-size: var(--fs-bold);
+.create-account-btn {
+  margin: 2rem 0 0 2vw;
+  font-size: 20px;
+  font-weight: var(--fw-bold);
   padding: 1rem 3rem;
-  border: 2px solid lightgray;
-  border-radius: 0.5rem;
+  border: 3px solid var(--clr-green-accent);
+  border-radius: 0.4rem;
   background-color: var(--clr-bg-color);
-  color: lightgray;
+  color: var(--clr-green-accent);
+}
+
+.create-account-btn:hover {
+  background-color: var(--clr-green-accent);
+  color: var(--clr-bg-color);
+}
+
+.login>p {
+  padding-left: 2vw;
+  margin-top: 2rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-text);
+}
+
+.login-btn {
+  color: var(--clr-green-accent);
+  background-color: var(--clr-bg-color);
+  border: none;
+  outline: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+}
+
+.login-btn:hover {
+  color: var(--clr-text-color);
 }

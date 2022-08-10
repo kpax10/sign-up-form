@@ -26,7 +26,7 @@
     <div class="right-container">
       <div class="right-description">
         <p>Take a look back in time billions of years and be <i>amazed</i> by what you see. The cosmos is waiting to be
-          discovered</p>
+          discovered.</p>
         <p>Take a gaze with us.</p>
         <p>You <i>know</i> you want to.</p>
       </div>
@@ -53,17 +53,20 @@
             </p>
             <p class="form-line-container">
               <label for="last-name">password</label>
-              <input class="error" type="password" name="password" id="password" required>
+              <input class="error" type="password" name="password" id="password" minlength="6" required>
               <span class="invalid-password">*Passwords do not match</span>
             </p>
             <p class="form-line-container">
               <label for="last-name">confirm password</label>
-              <input class="error" type="password" name="re-password" id="re-password" required>
+              <input class="error" type="password" name="re-password" id="re-password" minlength="6" required>
             </p>
         </div>
       </section>
-      <button>Create Account</button>
+      <button class="create-account-btn">Create Account</button>
       </form>
+      <div class="login">
+        <p>Already have an account? <button class="login-btn">Log in</button></p>
+      </div>
 
     </div>
   </div>
