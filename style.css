@@ -125,15 +125,15 @@ input:focus {
 }
 
 .error:invalid {
-  outline: 2px solid hsl(0, 62%, 58%);
+  outline: 2px solid var(--clr-red);
 }
 
 .error:valid {
   outline: 2px solid var(--clr-bg-color);
 }
 
-.invalid-password {
-  color: hsl(0, 62%, 58%);
+.error-msg {
+  color: var(--clr-red);
 }
 
 .form-line-container:nth-of-type(5) {
