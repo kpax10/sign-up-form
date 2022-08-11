@@ -2,25 +2,20 @@
 
 const firstEntry = document.querySelector('#password');
 const secondEntry = document.querySelector('#re-password');
-const invalidPassword = document.querySelector('.invalid-password');
+const errorMsg = document.querySelector('.error-msg');
 let firstPassword;
 let secondPassword;
 
 function checkPassword() {
-  if (firstPassword === secondPassword) {
-    invalidPassword.textContent = '';
-  }
-  if (firstPassword !== secondPassword) {
-    invalidPassword.textContent = '* Passwords do not match';
-  }
+  firstPassword === secondPassword ? errorMsg.textContent = '' : errorMsg.textContent = '*Passwords do not match';
 }
 
-firstEntry.addEventListener('change', () => {
+firstEntry.addEventListener('input', () => {
   firstPassword = firstEntry.value;
   checkPassword();
 })
 
-secondEntry.addEventListener('change', () => {
+secondEntry.addEventListener('input', () => {
   secondPassword = secondEntry.value;
   checkPassword();
 })
