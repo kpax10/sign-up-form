@@ -1,5 +1,7 @@
 # Sign-up-form
 
+- Sign up form for The Odin Project made from scratch using the below constraints.
+
 Step 1: Set up and planning
 
 - Set up your HTML and CSS files with some simple dummy content, just to make sure you have everything linked correctly.
