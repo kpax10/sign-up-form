@@ -31,7 +31,7 @@ body {
 
 .bg-img {
   flex-grow: 1;
-  background-image: url(/assets/gary-scott-YvRTYzkT6Hs-unsplash.jpg);
+  background-image: url(assets/gary-scott-YvRTYzkT6Hs-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
